@@ -23,8 +23,10 @@ class Wp_Scss {
 
   /** @var string - type of sourcemaps to generate */
   private $sourcemaps;
-  
-  /**
+	/** @var string	- name of cache file to generate  */
+	private $cache_file;
+
+	/**
    * Set values for Wp_Scss::properties
    *
    * @param string scss_dir - path to source directory for scss files
