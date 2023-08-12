@@ -232,12 +232,12 @@ class Wp_Scss {
         }
       }
     }
-
-    if ($latest_scss > $latest_css) {
-      return true;
-    } else {
+//
+//    if ($latest_scss > $latest_css) {
+//      return true;
+//    } else {
       return false;
-    }
+//    }
   }
 
   public function style_url_enqueued($url){
