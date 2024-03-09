@@ -119,6 +119,9 @@ class Wp_Scss {
 
     if (count($this->compile_errors) < 1) {
       if  ( is_writable($this->css_dir) ) {
+	if (!is_dir($this->cache)) {
+	  mkdir($this->cache, 0777, true);
+	}
         foreach (new DirectoryIterator($this->cache) as $this->cache_file) {
           if ( pathinfo($this->cache_file->getFilename(), PATHINFO_EXTENSION) == 'css') {
             file_put_contents($this->css_dir . $this->cache_file, file_get_contents($this->cache . $this->cache_file));
